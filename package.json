@@ -1,0 +1,19 @@
+{
+  "name": "git-auto-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -e js server.js"
+  },
+  "keywords": [],
+  "author": "aditya panther",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "fastify": "^3.22.0"
+  }
+}
