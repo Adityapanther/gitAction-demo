@@ -24,6 +24,6 @@ jobs:
         key: ${{ secrets.PRIV_KEY }}
         known_hosts: ${{ secrets.HOST }}
         cache: 'npm'
-    - run: cd gitAction-demo
+    - run: cd /home/ubuntu/Fastify
     - run: sudo git pull
     - run: npm ci
