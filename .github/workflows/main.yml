@@ -17,19 +17,4 @@ jobs:
           username: ubuntu
           host: ${{ secrets.HOST }} # server host
           passphrase: ${{ secrets.PASSPHRASE }}
-          script: |
-            set -e
-            whoami
-            cd /home/ubuntu/gitAction-demo
-            echo 'Checkout branch'
-            git checkout main
-            # Checkout package lock file
-            git checkout package-lock.json
-            # Pull latest code
-            echo 'Pulling latest code from branch'
-            sudo git pull origin main
-            # Install dependencies if any
-            echo 'Installing dependencies'
-            npm i
-            # start server
-            npm start
+          script: whoami
