@@ -17,4 +17,7 @@ jobs:
           username: ubuntu
           host: ${{ secrets.HOST }} # server host
           passphrase: ${{ secrets.PASSPHRASE }}
-          script: whoami
+          script: |
+          whoami
+          cd /home/ubuntu/
+          ls
