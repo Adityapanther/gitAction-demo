@@ -18,6 +18,12 @@ jobs:
           host: ${{ secrets.HOST }} # server host
           #passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            whoami
+            echo 'chnageed dir'
             cd /home/ubuntu/gitAction-demo
-            ls
+            echo 'checkout branch'
+            sudo git checkout main
+            echo 'pull origin main'
+            sudo git pull origin main
+            echo 'npm clean and install'
+            sudo npm ci
+            
