@@ -19,6 +19,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             set -e
+            whoami
             cd /home/ubuntu/gitAction-demo
             echo 'Checkout branch'
             git checkout main
