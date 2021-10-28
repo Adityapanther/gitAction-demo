@@ -16,7 +16,7 @@ jobs:
           key: ${{ secrets.PRIV_KEY }}
           username: ubuntu
           host: ${{ secrets.HOST }} # server host
-          passphrase: ${{ secrets.PASSPHRASE }}
+          #passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             whoami
             cd /home/ubuntu/gitAction-demo
