@@ -11,7 +11,7 @@ const launch = async () => {
     })
     fastify.listen("3000", (err, address) => {
         console.log(`listenning ${address}`);
-        console.log("done");
+        console.log("done me");
         
     })
 }
