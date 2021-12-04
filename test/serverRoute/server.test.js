@@ -3,11 +3,11 @@ const { fetch, baseURL, setupServer, delay } = require('../config');
 
 let server;
 
-describe("parant dir test", async () => {
+describe("parant dir test", async function(){
     this.timeout(20000)
     before(async function(){
         server = await setupServer();
-        await delay(20000)
+        await delay(2000)
     })
     it("should get 1", async function(){
         const headers = {

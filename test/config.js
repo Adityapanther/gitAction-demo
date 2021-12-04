@@ -13,7 +13,7 @@ const fetch = async (method, url, headers)=> {
     }
     console.log(config);
     const res = await axios(config);
-    return res;
+    return res.data;
    } catch (error) {
        if(error.response){
            return error.response.data;
