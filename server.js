@@ -4,11 +4,28 @@ const fastify = require('fastify')({
 
 const launch = async () => {
     fastify.get('/', async(req, res) => {
-        res.send({
-            status: "success",
-            statusCode: 200,
-            msg: 1,
-        })
+        const {search} = req.query;
+        if(!search){
+            res.send({
+                status: "success",
+                statusCode: 200,
+                msg: "1",
+            })
+        }
+
+        if(search && search === "5"){
+            res.send({
+                status: "success",
+                statusCode: 200,
+                msg:"5",
+            })
+        }else{
+            res.send({
+                status: "error",
+                statusCode: 404,
+                msg: search,
+            })
+        }
     })
     fastify.listen("3000", (err, address) => {
         console.log(`listenning ${address}`);

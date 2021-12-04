@@ -22,7 +22,41 @@ describe("parant dir test", async function(){
         expect(res.statusCode).to.be.eq(200);
         expect(res.status).to.be.a("string");
         expect(res.status).to.be.eq("success");
-        expect(res.msg).to.be.eq(1);
+        expect(res.msg).to.be.eq("1");
+    })
+
+
+    it("should match query", async function(){
+        const headers = {
+            "Content-Type": "application/json",
+        }
+        const res = await fetch(
+            "GET",
+            `${baseURL}/?search=5`,
+            headers,
+        )
+        console.log(res);
+        expect(res.statusCode).to.be.eq(200);
+        expect(res.status).to.be.a("string");
+        expect(res.status).to.be.eq("success");
+        expect(res.msg).to.be.eq("5");
+    })
+
+
+    it("should not match query", async function(){
+        const headers = {
+            "Content-Type": "application/json",
+        }
+        const res = await fetch(
+            "GET",
+            `${baseURL}/?search=3`,
+            headers,
+        )
+        console.log(res);
+        expect(res.statusCode).to.be.eq(404);
+        expect(res.status).to.be.a("string");
+        expect(res.status).to.be.eq("error");
+        expect(res.msg).to.be.eq("3");
     })
 
     
