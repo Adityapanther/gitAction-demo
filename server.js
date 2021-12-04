@@ -5,15 +5,19 @@ const fastify = require('fastify')({
 const launch = async () => {
     fastify.get('/', async(req, res) => {
         res.send({
-            status: "ok",
-            statusCode: 200
+            status: "success",
+            statusCode: 200,
+            msg: 1,
         })
     })
     fastify.listen("3000", (err, address) => {
         console.log(`listenning ${address}`);
-        console.log("done me");
-        
     })
+
+    return fastify;
 }
 
-launch()
+
+module.exports = {
+    launch
+}

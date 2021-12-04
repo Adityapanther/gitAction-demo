@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -e js server.js"
+    "test": "mocha ./test/**/*.test.js",
+    "start": "nodemon -e js app.js"
   },
   "keywords": [],
   "author": "aditya panther",
@@ -14,6 +14,8 @@
     "nodemon": "^2.0.13"
   },
   "dependencies": {
+    "axios": "^0.24.0",
+    "chai": "^4.3.4",
     "fastify": "^3.22.0"
   }
 }
