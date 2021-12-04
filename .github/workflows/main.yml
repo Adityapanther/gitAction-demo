@@ -18,6 +18,8 @@ jobs:
           host: ${{ secrets.HOST }} # server host
           #passphrase: ${{ secrets.PASSPHRASE }}
           script: |
+            npm ci
+            npm run test
             echo 'chnageed dir'
             cd /home/ubuntu/gitAction-demo
             echo 'checkout branch'
