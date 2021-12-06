@@ -45,11 +45,12 @@ jobs:
   
   notifyAfterTest:
     needs: test
-    continue-on-error: true
+    
     runs-on: ubuntu-latest
 
     steps:
     - name: Notify slack
+      continue-on-error: true
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_SECRET }}
       uses: abinoda/slack-action@master
