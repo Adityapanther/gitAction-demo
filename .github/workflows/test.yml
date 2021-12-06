@@ -57,5 +57,5 @@ jobs:
       uses: abinoda/slack-action@master
       with:
         args: '{\"channel\":\"C02Q7DJKA3A\", \"mrkdwn\": true,
-    \"text\": \"*TEST: ${{ github.event.pull_request.title }}*\n> *type*: test \n> *status*: ${{needs.test.status}} \n> *pull-url*: ${{ github.event.pull_request.html_url }}\"}'
+    \"text\": \"*TEST: ${{ github.event.pull_request.title }}*\n> *type*: test \n> *status*: ${{needs.test.result}} \n> *pull-url*: ${{ github.event.pull_request.html_url }}\"}'
   
