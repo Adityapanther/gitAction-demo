@@ -50,7 +50,6 @@ jobs:
 
     steps:
     - name: Notify slack
-      continue-on-error: true
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_SECRET }}
       uses: abinoda/slack-action@master
