@@ -49,7 +49,7 @@ describe("parant dir test", async function(){
         }
         const res = await fetch(
             "GET",
-            `${baseURL}/?search=5`,
+            `${baseURL}/?search=3`,
             headers,
         )
         console.log(res);
