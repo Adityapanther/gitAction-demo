@@ -32,7 +32,7 @@ describe("parant dir test", async function(){
         }
         const res = await fetch(
             "GET",
-            `${baseURL}/?search=2`,
+            `${baseURL}/?search=5`,
             headers,
         )
         console.log(res);
@@ -58,8 +58,6 @@ describe("parant dir test", async function(){
         expect(res.status).to.be.eq("error");
         expect(res.msg).to.be.eq("3");
     })
-
-    
 
     after(async function(){
         server.close()
