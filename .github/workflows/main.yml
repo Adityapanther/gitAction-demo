@@ -24,10 +24,13 @@ jobs:
             cd /home/ubuntu/gitAction-demo
             echo 'checkout branch'
             sudo git checkout main
-            echo ${{ secrets.DOT_ENV }} base64 -d >> .env
+            echo ${{ secrets.DOT_ENV }} base64 -d
             echo 'pull origin main'
             sudo git pull origin main
-            echo 'npm clean and install'
-            sudo npm ci
+            echo 'docker build'
+            docker build --tag git-action .
+            echo 'docker run'
+            docker run -p 8080:3000 git-action
+            
             
             
